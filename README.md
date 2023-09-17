@@ -17,17 +17,22 @@ $ cd ~/open-interpreter-docker
 $ docker build -t ubuntu:open-interpreter-docker .
 ```
 
+#### Create env.list
+
+```sh
+$ cp ./env.list.template ./env.list
+```
+
+Open env.list and replace the following `Your API Key` with your API key.
+
+```
+OPENAI_API_KEY=Your API Key
+```
+
 #### Run docker
 
 ```sh
-$ cd ~/open-interpreter-docker
-$ docker run -it --rm -v $(pwd):/root ubuntu:open-interpreter-docker
-```
-
-#### Run app
-
-```sh
-root@hostname:~# interpreter
+$ ./start.sh
 ```
 
 ## References
